@@ -1,0 +1,48 @@
+.testimonial-sec-v-2 {
+  padding-bottom: 100px;
+}
+
+.testimonial-area-v-2 {
+  &::after {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .testimonial-slide-v-2 {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../../assets/images/home/quote.svg"),;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100px;
+  }
+
+
+  button.prev-btn {
+    position: absolute;
+    left: -3%;
+    top: 40%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @media screen and (max-width: 1265px) {
+      left: 1%;
+    }
+  }
+
+  button.next-btn {
+    position: absolute;
+    right: -3%;
+    top: 40%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @media screen and (max-width: 1265px) {
+      right: 1%;
+    }
+  }
+
+  button.prev-btn,
+  button.next-btn {
+    @include respond('tab') {
+      display: none;
+    }
+  }
+}

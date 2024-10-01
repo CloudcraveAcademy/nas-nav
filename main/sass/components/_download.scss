@@ -1,0 +1,75 @@
+.download-content-wrapper {
+  display: flex;
+  gap: 150px;
+  align-items: center;
+
+  @include respond('tab') {
+    display: block;
+  }
+
+  .download-left-content {
+    flex-basis: 50%;
+
+    .app-btns {
+      text-align: left;
+    }
+  }
+
+  .download-right-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include respond('tab') {
+      overflow: hidden;
+    }
+
+    .download-phone-img {
+      border-radius: 39px;
+    }
+
+    .download-blob {
+      position: absolute;
+      left: -112px;
+      top: -2px;
+      z-index: -10;
+      width: 200% !important;
+      max-width: 500px !important;
+      transform: rotate(279deg);
+
+      @media screen and (max-width: 1099px) {
+        max-width: 400px !important;
+      }
+
+
+      @media screen and (min-width: 885px) and (max-width: 989px) {
+        left: 186px;
+      }
+
+      @include respond('tab') {
+        max-width: 440px !important;
+        top: 30px;
+        left: 212px;
+      }
+
+
+      @include respond('phone-land') {
+        left: 105px;
+      }
+
+      @media screen and (min-width: 711px) and (max-width: 767px) {
+        left: 163px;
+      }
+
+      @include respond('phone') {
+        top: 25px;
+        left: 15px;
+      }
+
+      @media screen and (max-width: 460px) {
+        max-width: 392px !important;
+        left: -16px;
+      }
+    }
+  }
+}

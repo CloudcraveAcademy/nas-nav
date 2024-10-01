@@ -1,0 +1,12 @@
+.nav-link {
+  @include respond('desktop') {
+    font-size: 13px !important;
+  }
+}
+
+.header__upper--right .navigation a,
+.header__upper--right .button{
+  @include respond('desktop') {
+    font-size: 13px !important;
+  }
+}

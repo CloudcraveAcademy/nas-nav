@@ -1,0 +1,133 @@
+.who-we-are {
+  padding: 100px 0;
+
+  .who-we-are-left-content {
+    margin-right: 50px;
+
+    @include respond('tab') {
+      margin-right: 0;
+    }
+
+    .who-we-are-btn {
+      margin-top: 20px;
+    }
+  }
+
+  .who-we-are-right-content {
+    position: relative;
+    margin-top: 50px;
+    flex-basis: 45%;
+
+    .who-we-are-blob {
+      position: absolute;
+      z-index: -2;
+      transform: rotate(295deg);
+      top: -29px;
+      left: -45px;
+
+      @include respond('tab') {
+        transform: rotate(347deg);
+        top: -29px;
+        left: 165px;
+      }
+
+      @media screen and (max-width: 450px) {
+        transform: rotate(283deg);
+        top: -40px;
+        left: 94px;
+      }
+
+      @media screen and (max-width: 380px) {
+        left: 45px;
+      }
+    }
+
+    .who-we-are-blob-2 {
+      position: absolute;
+      right: 25px;
+      bottom: -78px;
+      width: 70%;
+      z-index: -10;
+      transform: rotate(424deg);
+
+      @media screen and (max-width: 1200px) {
+        width: 40%;
+        right: 11px;
+        bottom: -90px;
+      }
+
+      @media screen and (max-width: 1197px) {
+        right: 25px;
+      }
+
+      @media screen and (max-width: 1100px) {
+        transform: rotate(45deg);
+        right: 126px;
+      }
+    }
+
+
+    .who-we-are-image-2 {
+      position: absolute;
+      left: -20px;
+      bottom: -20px;
+      z-index: 10;
+      border-radius: 10px;
+
+      @include respond('tab') {
+        display: none;
+      }
+    }
+
+    .who-we-are-image-1 {
+      border-radius: 10px;
+
+      @include respond('tab') {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .who-we-are-title {
+    position: relative;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 30px;
+
+    &::after {
+      left: 0;
+      bottom: 0;
+      height: 6px;
+      width: 60px;
+      content: "";
+      position: absolute;
+      background-image: url('../../assets/images/header-border.webp');
+    }
+  }
+
+  .who-we-are-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    @include respond('phone-land') {
+      display: block;
+    }
+
+    .who-we-are-list-item {
+      flex-basis: calc(50% - 10px);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+  }
+
+}
+
+

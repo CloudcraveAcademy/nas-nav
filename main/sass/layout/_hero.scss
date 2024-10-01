@@ -1,0 +1,306 @@
+.hero-area-v-2 {
+  min-height: 900px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  
+
+  @include respond('tab') {
+    height: 1350px;
+  }
+
+  .hero-area-wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 10px;
+
+    @include respond('tab') {
+      display: block;
+    }
+  }
+
+  .hero-area-left {
+    position: relative;
+    top: 160px;
+    width: 500px;
+    padding-left: 50px;
+
+    @include respond('tab') {
+      position: static;
+      padding-left: 0;
+      padding-top: 100px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 365px) {
+      padding-top: 150px;
+    }
+
+    .hero-title-v-2 {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1.4;
+
+      @media screen and (max-width: 335px) {
+        width: 300px;
+      }
+
+      @include respond('tab') {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40px;
+      }
+
+      @media screen and (min-width: 767px) {
+        width: 480px;
+      }
+
+      @media screen and (max-width: 335px) {
+        width: 300px;
+      }
+
+      .hero-title-bg {
+        background-color: $white;
+      }
+
+      @include respond('phone-land') {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      & .hero-title-accent-v-2 {
+        color: $theme-color;
+      }
+    }
+  }
+
+  .hero-area-right {
+    position: relative;
+    top: -10px;
+
+    @include respond('phone-land') {
+      flex-basis: 100%;
+      position: static;
+    }
+
+    @include respond('tab') {
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      @include respond('tab') {
+        padding-top: 100px;
+      }
+
+      @include respond('phone') {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+
+  svg {
+    position: absolute;
+    width: 1400px;
+    height: 750px;
+    fill: #fff;
+  }
+
+  @include respond('phone') {
+    padding-top: 90px;
+    svg {
+      position: absolute;
+      width: 320px;
+      height: 750px;
+      fill: #fff;
+    }
+  }
+
+
+  .hero-text {
+    color: $white;
+    font-size: 19px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+
+    @include respond('tab') {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 15px;
+    }
+
+    @media screen and (min-width: 767px) {
+      width: 480px;
+    }
+
+    @media screen and (max-width: 335px) {
+      width: 300px;
+    }
+
+  }
+
+
+
+  .combine-form {
+    max-width: 526px;
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    margin-top: 24px;
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.10);
+    background-color: $white;
+
+    .navigation {
+      background-color: $white;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .form1 {
+      padding: 24px;
+    }
+
+    .shape1 {
+      position: absolute;
+      top: 0;
+      left: -40px;
+      z-index: -2;
+    }
+
+    &.style2 {
+      &:after {
+        top: -24px;
+        right: -24px;
+        bottom: unset;
+        height: 430px;
+        width: 230px;
+      }
+
+      .shape1 {
+        bottom: 0;
+        left: -40px;
+        top: unset;
+      }
+    }
+  }
+
+  .form-tab {
+    border-bottom: 1px solid $border-color;
+    padding: 24px 10px;
+    position: relative;
+    z-index: 2;
+
+    .nav-link {
+      font-size: 18px;
+      font-weight: 600;
+      color: $black;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      flex: 1;
+
+      i {
+        margin-right: 4px;
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid $border-color !important;
+      }
+
+      &:hover,
+      &.active {
+        border: none;
+        color: $theme-color;
+      }
+    }
+  }
+
+
+  .form1 {
+    .row {
+      --bs-gutter-x: 16px;
+    }
+
+    .form-title {
+      margin-top: -0.3em;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: $title-color;
+    }
+
+    .form-text {
+      font-size: 18px;
+      margin-bottom: 24px;
+      max-width: 500px;
+      color: $title-color;
+    }
+
+    .ot-btn {
+      width: 100%;
+      border-radius: 8px;
+      background-color: $black;
+      color: $white;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover {
+        border-color: $title-color;
+        background-color: $title-color;
+      }
+    }
+  }
+
+  .download-buttons {
+    margin-top: 50px;
+
+    @include respond('tab') {
+      display: flex;
+      justify-content: center;
+
+      @include respond('phone-land') {
+        justify-content: center;
+    }
+  }
+  }
+
+  .download-buttons a:first-child {
+    @include respond('tab') {
+      margin-right: 10px;
+    }
+
+    @include respond('desktop') {
+      margin-bottom: 10px;
+    }
+  }
+
+  #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+}
